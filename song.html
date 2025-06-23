@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8">
+  <title>song</title>
+  <style>
+    body {
+      margin: 0;
+     background-image: url(photo\ 7.jpg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+
+    .spinning-record {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      animation: spin 3s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h2 {
+      color: #e9d5d5;
+      margin-top: 20px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body onload="playAudio()">
+  <img class="spinning-record" src="C:\Users\joooj\Downloads\a1fd58d5-654f-4ba0-a1ea-632641056d34.jpg" alt="أسطوانة موسيقية" />
+  
+  <h2>🎵 كحتكبر حتنسى وحتسمع نفس القصه🎵</h2>
+
+  <audio id="bg-music">
+  <source src="IMG_4502.mp3" type="audio/mpeg">
+  متصفحك لا يدعم تشغيل الصوت.
+</audio>
+
+<button onclick="document.getElementById('bg-music').play();">تشغيل الصوت</button>
+<br><br>
+<a href="home.html">Home</a>
+ 
+</body>
+</html>

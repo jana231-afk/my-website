@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <title>تذكير</title>
+    <script>
+        function checkFear() {
+            let fear = prompt("كم نسبة خوفك من المستقبل؟ (اكتب رقم بين 0 إلى 100)");
+
+            if (fear !== null && fear !== "") {
+                fear = parseFloat(fear);
+                if (fear > 50) {
+                    alert("وعلى الله رزكم | تذكري دايم ان احنا مانعرف كيف نجيب رزقنا لكن نعرف انه من الله وربي عمره مايضيع تعب");
+                } else {
+                    alert("من توكل على الله فهو حسبه وكل مالانسان امن بهاذي العباره كل مارتاااح");
+                }
+            }
+        }
+    </script>
+    <br><br>
+    <h3>ستمطر يوما مثل هذه النجوم</h3>
+</head>
+<body style="background-color: #e8e8e0; text-align: center; padding: 40px;">
+    <h2 style="color:#800080;">قيّم شعورك تجاه المستقبل</h2>
+    <button onclick="checkFear()" style="padding: 10px 20px; background-color: #800080; color: white; border: none; border-radius: 10px; font-size: 16px;">
+        قيّم نفسك الآن
+    </button>
+    <br><br>
+     <a href="home.html">Home</a>
+     <!-- Falling Stars and Hearts Animation -->
+<style>
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+.falling {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  animation: fall linear infinite;
+  z-index: 9999;
+  pointer-events: none;
+}
+</style>
+
+<script>
+// رموز النجوم والقلوب
+const symbols = ["✨", "💖", "💫", "❤️", "🌟"];
+for (let i = 0; i < 40; i++) {
+  const el = document.createElement("div");
+  el.classList.add("falling");
+  el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+  el.style.left = Math.random() * 100 + "vw";
+  el.style.animationDuration = (4 + Math.random() * 4) + "s";
+  el.style.fontSize = (18 + Math.random() * 20) + "px";
+  el.style.animationDelay = Math.random() * 5 + "s";
+  document.body.appendChild(el);
+}
+</script>
+
+</body>
+</html>
